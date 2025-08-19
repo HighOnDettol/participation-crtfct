@@ -75,6 +75,14 @@
             line-height: 1.2;
             white-space: nowrap;
         }
+
+        /* Style for the c/o line */
+        .co-line {
+            font-family: 'Lora', serif;
+            font-size: 0.9rem; /* Smaller font size for subtext */
+            color: #555;
+            margin-top: 0.5rem;
+        }
         
         /* Watermark styling */
         .watermark-img-container {
@@ -208,9 +216,13 @@
                         <p class="mb-6">
                            This Certificate is awarded to
                         </p>
-                        <p class="mb-8" style="font-size: 1.5rem; font-weight: 700;">
+                        <p class="mb-2" style="font-size: 1.5rem; font-weight: 700;">
                             <!-- This div provides a visual line for a handwritten name -->
                             <div class="border-b-2 border-dark-maroon pb-1 h-8"></div>
+                        </p>
+                        <p class="co-line">
+                            c/o <span class="border-b border-dark-maroon inline-block w-40 h-6"></span>
+                            from <span class="border-b border-dark-maroon inline-block w-48 h-6"></span>
                         </p>
                         <p class="mb-6">
                             for his/her dedicated participation in the
