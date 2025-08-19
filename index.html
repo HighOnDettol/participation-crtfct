@@ -57,20 +57,20 @@
         .form-title-main {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
-            font-size: 2.2rem;
+            font-size: 2rem; /* Reduced for landscape */
             letter-spacing: 0.08em;
         }
         .form-subtitle {
             font-family: 'Lora', serif;
             font-style: italic;
-            font-size: 1rem;
+            font-size: 0.9rem; /* Reduced for landscape */
             color: #555;
         }
         
         /* Signature name style */
         .signature-name {
             font-family: 'Great Vibes', cursive;
-            font-size: 1.5rem;
+            font-size: 1.25rem; /* Reduced for landscape */
             font-weight: 400;
             line-height: 1.2;
             white-space: nowrap;
@@ -104,10 +104,10 @@
             z-index: 1;
         }
 
-        /* A4 Page Styling */
+        /* A4 Page Styling for LANDSCAPE */
         .form-container {
-            width: 210mm;
-            height: 297mm;
+            width: 297mm; /* A4 landscape width */
+            height: 210mm; /* A4 landscape height */
             max-width: none;
             box-sizing: border-box;
             display: flex;
@@ -118,7 +118,7 @@
 
         .form-inner-border {
             border: 4mm solid var(--color-gold-main);
-            padding: 20mm;
+            padding: 15mm; /* Adjusted padding for landscape */
             width: calc(100% - 8mm);
             height: calc(100% - 8mm);
             box-sizing: border-box;
@@ -129,7 +129,7 @@
 
         .form-content-area {
             background-color: white;
-            padding: 20mm;
+            padding: 15mm; /* Adjusted padding for landscape */
             border-radius: 0.25rem;
             text-align: center;
             position: relative;
@@ -155,21 +155,21 @@
             .form-container {
                 box-shadow: none !important;
                 border: none !important;
-                width: 210mm !important;
-                height: 297mm !important;
+                width: 297mm !important;
+                height: 210mm !important;
                 max-width: none !important;
                 padding: 0 !important;
                 margin: 0 !important;
             }
             .form-inner-border {
                 border: 4mm solid var(--color-gold-main) !important;
-                padding: 20mm !important;
+                padding: 15mm !important;
                 width: calc(100% - 8mm) !important;
                 height: calc(100% - 8mm) !important;
             }
             .form-content-area {
                 box-shadow: none !important;
-                padding: 20mm !important;
+                padding: 15mm !important;
             }
         }
     </style>
@@ -245,7 +245,7 @@
                 filename: `Participation_Form.pdf`,
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { scale: 2, logging: true, dpi: 192, letterRendering: true },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }
             };
             html2pdf().from(formFrame).set(options).save();
         });
