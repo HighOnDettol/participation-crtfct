@@ -1,303 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sishu Mangal Parsat - Participation Form</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom Tailwind configuration for specific colors */
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sishu Mangal Parsat - Participation Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Tailwind configuration for specific colors */
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
 
-        /* Define custom colors for beige, and new darker gold shades */
-        :root {
-            --color-beige-200: #F5F5DC;
-            --color-gold-main: #B8860B;
-            --color-gold-light: #DAA520;
-            --color-maroon-700: #800000;
-            --color-light-gold-bg: #FDF8E1;
-            --color-dark-maroon: #5C0000;
-        }
+        /* Define custom colors for beige, and new darker gold shades */
+        :root {
+            --color-beige-200: #F5F5DC;
+            --color-gold-main: #B8860B;
+            --color-gold-light: #DAA520;
+            --color-maroon-700: #800000;
+            --color-light-gold-bg: #FDF8E1;
+            --color-dark-maroon: #5C0000;
+        }
 
-        .bg-beige-200 { background-color: var(--color-beige-200); }
-        .border-gold-main { border-color: var(--color-gold-main); }
-        .from-gold-main { --tw-gradient-from: var(--color-gold-main) var(--tw-gradient-stops); }
-        .via-gold-light { --tw-gradient-via: var(--color-gold-light) var(--tw-gradient-stops); }
-        .to-gold-main { --tw-gradient-to: var(--color-gold-main) var(--tw-gradient-stops); }
-        .text-gold-main { color: var(--color-gold-main); }
-        .text-gold-light { color: var(--color-gold-light); }
-        .text-maroon-700 { color: var(--color-maroon-700); }
-        .bg-light-gold-bg { background-color: var(--color-light-gold-bg); }
-        .text-dark-maroon { color: var(--color-dark-maroon); }
+        .bg-beige-200 { background-color: var(--color-beige-200); }
+        .border-gold-main { border-color: var(--color-gold-main); }
+        .from-gold-main { --tw-gradient-from: var(--color-gold-main) var(--tw-gradient-stops); }
+        .via-gold-light { --tw-gradient-via: var(--color-gold-light) var(--tw-gradient-stops); }
+        .to-gold-main { --tw-gradient-to: var(--color-gold-main) var(--tw-gradient-stops); }
+        .text-gold-main { color: var(--color-gold-main); }
+        .text-gold-light { color: var(--color-gold-light); }
+        .text-maroon-700 { color: var(--color-maroon-700); }
+        .bg-light-gold-bg { background-color: var(--color-light-gold-bg); }
+        .text-dark-maroon { color: var(--color-dark-maroon); }
 
-        /* Custom fonts for a more aesthetic look */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            min-height: 100vh;
-            padding: 2rem;
-            box-sizing: border-box;
-        }
+        /* Custom fonts for a more aesthetic look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
 
-        /* Specific styles for the invitation text to ensure ample space and classic feel */
-        .form-text {
-            font-family: 'Lora', serif;
-            line-height: 1.8;
-            font-size: 1.25rem;
-        }
+        /* Specific styles for the invitation text to ensure ample space and classic feel */
+        .form-text {
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            font-size: 1.25rem;
+        }
 
-        /* Style for the main title */
-        .form-title-main {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 2rem; /* Reduced for landscape */
-            letter-spacing: 0.08em;
-        }
-        .form-subtitle {
-            font-family: 'Lora', serif;
-            font-style: italic;
-            font-size: 0.9rem; /* Reduced for landscape */
-            color: #555;
-        }
-        
-        /* Signature name style - Updated to Lora italic */
-        .signature-name {
-            font-family: 'Lora', serif;
-            font-style: italic;
-            font-size: 1.35rem; /* Slightly reduced to fit better */
-            font-weight: 400;
-            line-height: 1.2;
-            white-space: nowrap;
-        }
+        /* Style for the main title */
+        .form-title-main {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2rem; /* Reduced for landscape */
+            letter-spacing: 0.08em;
+        }
+        .form-subtitle {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 0.9rem; /* Reduced for landscape */
+            color: #555;
+        }
+        
+        /* Signature name style */
+        .signature-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.35rem; /* Slightly reduced to fit better */
+            font-weight: 400;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
 
-        /* Signature title/org style */
-        .signature-detail {
-            font-family: 'Playfair Display', serif;
-            font-size: 0.7rem; /* Slightly reduced to fit better */
-            line-height: 1.2;
-            white-space: nowrap;
-        }
+        /* Signature title/org style */
+        .signature-detail {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.7rem; /* Slightly reduced to fit better */
+            line-height: 1.2;
+            white-space: nowrap;
+        }
 
-        /* Style for the c/o line */
-        .co-line {
-            font-family: 'Lora', serif;
-            font-size: 0.9rem; /* Smaller font size for subtext */
-            color: #555;
-            margin-top: 0.5rem;
-        }
+        /* Style for the c/o line */
+        .co-line {
+            font-family: 'Lora', serif;
+            font-size: 0.9rem; /* Smaller font size for subtext */
+            color: #555;
+            margin-top: 0.5rem;
+        }
 
-        /* Style for the registration text */
-        .registration-text {
-            font-family: 'Lora', serif;
-            font-size: 0.75rem;
-            color: #444;
-            margin-top: 0.25rem;
-            line-height: 1.2;
-        }
-        
-        /* Watermark styling */
-        .watermark-img-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 0;
-            pointer-events: none;
-        }
-        .watermark-img {
-            width: 70%;
-            height: auto;
-            opacity: 0.1;
-            object-fit: contain;
-            transform: translateZ(0);
-            -webkit-transform: translateZ(0);
-        }
+        /* Style for the registration text */
+        .registration-text {
+            font-family: 'Lora', serif;
+            font-size: 0.75rem;
+            color: #444;
+            margin-top: 0.25rem;
+            line-height: 1.2;
+        }
+        
+        /* Watermark styling */
+        .watermark-img-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .watermark-img {
+            width: 70%;
+            height: auto;
+            opacity: 0.1;
+            object-fit: contain;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+        }
 
-        /* Ensure content layers are above the watermark */
-        .content-layer {
-            position: relative;
-            z-index: 1;
-        }
+        /* Ensure content layers are above the watermark */
+        .content-layer {
+            position: relative;
+            z-index: 1;
+        }
 
-        /* A4 Page Styling for LANDSCAPE */
-        .form-container {
-            width: 297mm; /* A4 landscape width */
-            height: 210mm; /* A4 landscape height */
-            max-width: none;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-        }
+        /* A4 Page Styling for LANDSCAPE */
+        .form-container {
+            width: 297mm; /* A4 landscape width */
+            height: 210mm; /* A4 landscape height */
+            max-width: none;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
 
-        .form-inner-border {
-            border: 4mm solid var(--color-gold-main);
-            padding: 15mm; /* Adjusted padding for landscape */
-            width: calc(100% - 8mm);
-            height: calc(100% - 8mm);
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+        .form-inner-border {
+            border: 4mm solid var(--color-gold-main);
+            padding: 15mm; /* Adjusted padding for landscape */
+            width: calc(100% - 8mm);
+            height: calc(100% - 8mm);
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-        .form-content-area {
-            background-color: white;
-            padding: 15mm; /* Adjusted padding for landscape */
-            border-radius: 0.25rem;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+        .form-content-area {
+            background-color: white;
+            padding: 15mm; /* Adjusted padding for landscape */
+            border-radius: 0.25rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-        /* Adjustments for print */
-        @media print {
-            .input-section-container, .button-container {
-                display: none !important;
-            }
-            body {
-                padding: 0 !important;
-                margin: 0 !important;
-                display: block !important;
-                background-color: white !important;
-            }
-            .form-container {
-                box-shadow: none !important;
-                border: none !important;
-                width: 297mm !important;
-                height: 210mm !important;
-                max-width: none !important;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-            .form-inner-border {
-                border: 4mm solid var(--color-gold-main) !important;
-                padding: 15mm !important;
-                width: calc(100% - 8mm) !important;
-                height: calc(100% - 8mm) !important;
-            }
-            .form-content-area {
-                box-shadow: none !important;
-                padding: 15mm !important;
-            }
-        }
-    </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        /* Adjustments for print */
+        @media print {
+            .input-section-container, .button-container {
+                display: none !important;
+            }
+            body {
+                padding: 0 !important;
+                margin: 0 !important;
+                display: block !important;
+                background-color: white !important;
+            }
+            .form-container {
+                box-shadow: none !important;
+                border: none !important;
+                width: 297mm !important;
+                height: 210mm !important;
+                max-width: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .form-inner-border {
+                border: 4mm solid var(--color-gold-main) !important;
+                padding: 15mm !important;
+                width: calc(100% - 8mm) !important;
+                height: calc(100% - 8mm) !important;
+            }
+            .form-content-area {
+                box-shadow: none !important;
+                padding: 15mm !important;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body class="bg-gray-100 p-8 flex flex-col items-center">
 
-    <div class="button-container bg-white p-8 rounded-xl shadow-lg mb-8 w-full max-w-md flex justify-around">
-        <button id="generatePdfBtn" class="btn-primary w-full mr-2">Generate PDF</button>
-        <button id="downloadImageBtn" class="btn-secondary w-full ml-2">Download as Image</button>
-    </div>
+    <div class="button-container bg-white p-8 rounded-xl shadow-lg mb-8 w-full max-w-md flex justify-around">
+        <button id="generatePdfBtn" class="btn-primary w-full mr-2">Generate PDF</button>
+        <button id="downloadImageBtn" class="btn-secondary w-full ml-2">Download as Image</button>
+    </div>
 
-    <div id="formFrame" class="form-container bg-beige-200 rounded-xl shadow-2xl">
-        <div class="form-inner-border bg-beige-200 rounded-lg">
-            <div class="form-content-area">
-                <div class="watermark-img-container">
-                    <img src="https://highondettol.github.io/sishu-mangal-jubilee/logo.jpg"
-                         alt="Sishu Mangal Parsat Logo Watermark"
-                         class="watermark-img"
-                         onerror="this.style.display='none'; console.error('Watermark image failed to load. Check URL.');">
-            </div>
+    <div id="formFrame" class="form-container bg-beige-200 rounded-xl shadow-2xl">
+        <div class="form-inner-border bg-beige-200 rounded-lg">
+            <div class="form-content-area">
+                <div class="watermark-img-container">
+                    <img src="https://highondettol.github.io/sishu-mangal-jubilee/logo.jpg"
+                         alt="Sishu Mangal Parsat Logo Watermark"
+                         class="watermark-img"
+                         onerror="this.style.display='none'; console.error('Watermark image failed to load. Check URL.');">
+                </div>
 
-            <div class="content-layer flex flex-col justify-between h-full">
-                <div class="mb-auto pt-4">
-                    <p class="form-title-main text-gold-main mb-2 leading-tight">GOLDEN JUBILEE</p>
-                    <p class="form-title-main text-black mb-1 leading-tight">Sishu Mangal Parsat</p>
-                    <p class="registration-text">Registered under the West Bengal Societies Registration Act, 1961 - No. S/17073/1975-76</p>
-                    <p class="form-subtitle mb-6">Celebrating 50 Years of Educational Excellence</p>
+                <div class="content-layer flex flex-col justify-between h-full">
+                    <div class="mb-auto pt-4">
+                        <p class="form-title-main text-gold-main mb-2 leading-tight">GOLDEN JUBILEE</p>
+                        <p class="form-title-main text-black mb-1 leading-tight">Sishu Mangal Parsat</p>
+                        <p class="registration-text">Registered under the West Bengal Societies Registration Act, 1961 - No. S/17073/1975-76</p>
+                        <p class="form-subtitle mb-6">Celebrating 50 Years of Educational Excellence</p>
 
-                    <div class="inline-block bg-light-gold-bg text-gold-main px-6 py-2 rounded-full text-lg font-bold mb-8">
-                        1975 - 2025
-                    </div>
-                </div>
+                        <div class="inline-block bg-light-gold-bg text-gold-main px-6 py-2 rounded-full text-lg font-bold mb-8">
+                            1975 - 2025
+                        </div>
+                    </div>
 
-                <div class="form-text text-gray-800 px-4 mb-auto">
-                    <p class="mb-6">
-                        This Certificate is awarded to
-                    </p>
-                    <p class="mb-2" style="font-size: 1.5rem; font-weight: 700;">
-                                                <div class="border-b-2 border-dark-maroon pb-1 h-8" style="border-style: dotted;"></div>
-                    </p>
-                    <p class="co-line">
-                        c/o <span class="border-b border-dark-maroon inline-block w-64 h-6"></span>
-                        from <span class="border-b border-dark-maroon inline-block w-64 h-6"></span>
-                    </p>
-                    <p class="mb-6">
-                        for his/her dedicated participation in the
-                        <span class="text-maroon-700">Golden Jubilee Celebration</span>.
-                        Your enthusiasm and commitment have been an inspiration to all.
-                    </p>
-                </div>
+                    <div class="form-text text-gray-800 px-4 mb-auto">
+                        <p class="mb-6">
+                           This Certificate is awarded to
+                        </p>
+                        <p class="mb-2" style="font-size: 1.5rem; font-weight: 700;">
+                            <!-- This div provides a visual line for a handwritten name -->
+                            <div class="border-b-2 border-dark-maroon pb-1 h-8" style="border-style: dotted;"></div>
+                        </p>
+                        <p class="co-line">
+                            c/o <span class="border-b border-dark-maroon inline-block w-64 h-6"></span>
+                            from <span class="border-b border-dark-maroon inline-block w-64 h-6"></span>
+                        </p>
+                        <p class="mb-6">
+                            for his/her dedicated participation in the
+                            <span class="text-maroon-700">Golden Jubilee Celebration</span>.
+                            Your enthusiasm and commitment have been an inspiration to all.
+                        </p>
+                    </div>
 
-                                <div class="w-1/2 h-0.5 bg-gradient-to-r from-transparent via-gold-main to-transparent my-4 mx-auto"></div>
+                    <!-- New decorative line for separation -->
+                    <div class="w-1/2 h-0.5 bg-gradient-to-r from-transparent via-gold-main to-transparent my-4 mx-auto"></div>
 
-                <div class="flex justify-center items-end w-full gap-x-12 pb-4">
-                    <div class="text-left">
-                        <p class="signature-name">Mitali Bhattacherjee</p>
-                        <p class="signature-detail">Secretary, Golden Jubilee Celebratory Committee</p>
-                    </div>
-                    <div class="text-left">
-                        <p class="signature-name">Arundhati Roy</p>
-                        <p class="signature-detail">President, Golden Jubilee Celebratory Committee</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+                    <div class="flex justify-center items-end w-full gap-x-12 pb-4">
+                        <div class="text-left">
+                            <p class="signature-name">Mitali Bhattacherjee</p>
+                            <p class="signature-detail">Secretary, Golden Jubilee Celebratory Committee</p>
+                        </div>
+                        <div class="text-left">
+                            <p class="signature-name">Arundhati Roy</p>
+                            <p class="signature-detail">President, Golden Jubilee Celebratory Committee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        // Get references to the buttons
-        const generatePdfBtn = document.getElementById('generatePdfBtn');
-        const downloadImageBtn = document.getElementById('downloadImageBtn');
-        const formFrame = document.getElementById('formFrame');
+    <script>
+        // Get references to the buttons
+        const generatePdfBtn = document.getElementById('generatePdfBtn');
+        const downloadImageBtn = document.getElementById('downloadImageBtn');
+        const formFrame = document.getElementById('formFrame');
 
-        // Add event listener for PDF generation
-        generatePdfBtn.addEventListener('click', () => {
-            const options = {
-                margin: [0, 0, 0, 0],
-                filename: `Participation_Form.pdf`,
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2, logging: true, dpi: 192, letterRendering: true },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }
-            };
-            html2pdf().from(formFrame).set(options).save();
-        });
+        // Add event listener for PDF generation
+        generatePdfBtn.addEventListener('click', () => {
+            const options = {
+                margin: [0, 0, 0, 0],
+                filename: `Participation_Form.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, logging: true, dpi: 192, letterRendering: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'landscape' }
+            };
+            html2pdf().from(formFrame).set(options).save();
+        });
 
-        // Add event listener for image download
-        downloadImageBtn.addEventListener('click', () => {
-            html2canvas(formFrame, { scale: 2 }).then(canvas => {
-                const imageUrl = canvas.toDataURL('image/png');
-                const link = document.createElement('a');
-                link.href = imageUrl;
-                link.download = `Participation_Form.png`;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            }).catch(error => {
-                console.error('Error generating image:', error);
-            });
-        });
-    </script>
+        // Add event listener for image download
+        downloadImageBtn.addEventListener('click', () => {
+            html2canvas(formFrame, { scale: 2 }).then(canvas => {
+                const imageUrl = canvas.toDataURL('image/png');
+                const link = document.createElement('a');
+                link.href = imageUrl;
+                link.download = `Participation_Form.png`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }).catch(error => {
+                console.error('Error generating image:', error);
+            });
+        });
+    </script>
 </body>
 </html>
